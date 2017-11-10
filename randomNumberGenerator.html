@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Number Generator</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <h1 class="text-center">Generate a Random Number!</h1>
+
+    <div class="text-center">
+      <!-- button for generating random numbers -->
+      <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-question-sign"></span></h1></button> 
+    </div>
+
+  </div>
+
+  <!-- div called "random-number" where random number will go -->
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+    	$("#random-button").on("click",function(){
+    		var random = Math.floor(Math.random() *1000) +1 ;
+    		console.log(random);
+    		$("#random-number").html(random);
+    	});
+    });
+   </script>
+</body>
